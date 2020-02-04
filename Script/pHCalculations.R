@@ -19,5 +19,5 @@ pHData<-pHcalib %>%
   mutate(pH = pH(Ex=mV,Etris=mVTris,S=35,T=Temp))%>%
   select(PoolID, Date, Time, pH, Temp, Notes) ## need to calculate pH insi then it is done
 
-
+write.csv(x = pHData, file = 'Output/pHData.csv')
 
